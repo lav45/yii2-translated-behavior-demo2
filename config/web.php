@@ -14,7 +14,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => '8g2YQV4iqgDpNDeW8-denacBZb5skI8k',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -42,15 +42,17 @@ $config = [
                 ],
             ],
         ],
+        'formatter' => [
+            'dateFormat' => 'dd.MM.yyyy',
+            'timeFormat' => 'HH:mm',
+            'datetimeFormat' => 'dd.MM.yyyy HH:mm',
+        ],
         'db' => $db,
-        /*
         'urlManager' => [
+            'class' => 'lav45\translate\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-            ],
         ],
-        */
     ],
     'params' => $params,
 ];

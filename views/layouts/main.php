@@ -9,6 +9,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\components\LangHelper;
 
 AppAsset::register($this);
 ?>
@@ -35,10 +36,18 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
+
+    $langHelper = new LangHelper();
+
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
+            [
+                'label' => $langHelper->getLabel(),
+                'items' => $langHelper->getList(),
+            ],
             ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'News', 'url' => ['/news/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (

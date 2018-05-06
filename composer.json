@@ -14,10 +14,17 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.5.0",
         "yiisoft/yii2": "~2.0.14",
         "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0"
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+
+        "lav45/yii2-behaviors": "0.4.*",
+        "lav45/yii2-translated-behavior": "1.4.*",
+        "lav45/yii2-db-migrate": "0.4.*",
+
+        "unclead/yii2-multiple-input": "dev-master as 2.14.x-@dev",
+        "vova07/yii2-imperavi-widget": "dev-master as 2.0.x-@dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
